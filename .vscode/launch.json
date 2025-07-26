@@ -1,0 +1,14 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "msedge",
+            "request": "launch",
+            "name": "Open perfil.html",
+            "file": "/home/leonardo/perfil_pessoal/Perfil_pessoal/Perfil_pessoal/perfil.html"
+        }
+    ]
+}
