@@ -1,182 +1,260 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Leonardo| Perfil Pessoal</title>
-
+    <title>Leonardo Ribeiro | Perfil Pessoal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-
-        *{
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: Arial, Helvetica, Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
-       body {
-        background-color: darkslateblue;
-        color: #333;
-        line-height: 1,6;
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
         }
 
-        /*Container Principal*/
-
+        /* Container Principal */
         .container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 20px;
-
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
         }
 
-        /*Cabeçalho Inicial*/
-
-        header h1{
-            font-size: 2.5rem;
-            font-weight: 300;
-            margin-bottom: 10px;
-            color: #200;
+        /* Cabeçalho */
+        header {
+            padding: 80px 0 40px;
+            text-align: center;
+            background: linear-gradient(135deg, #6e48aa 0%, #9d50bb 100%);
+            color: white;
+            margin-bottom: 40px;
+            border-radius: 0 0 20px 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         }
 
-        header{
-            font-size: 1.1rem;
-            color: #666;
+        header h1 {
+            font-size: 2.8rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+        }
+
+        header p {
+            font-size: 1.2rem;
             max-width: 600px;
             margin: 0 auto;
+            opacity: 0.9;
         }
 
-    /* Seção dos Boxes de apresentação geral*/
-
-    .portifolio-section{
-        padding: 40px 0;
-    }
-
-    .boxes-container {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 30px;
-        margin-top: 30px;
-    }
-
-    .info-box{
-        background: white;
-        border-radius: 8px;
-        padding: 30px;
-        box-shadow: 0 5px 15px rgba(red, green, blue, alpha);
-        transition: transform 0.3s ease box-shadow 0.3s ease;
-    }
-
-    .info-box h3{
-        font-size: 1.3rem;
-        margin-bottom: 15px;
-        color: #222;
-        font-weight: 500;
-    }
-
-    .info-box p{
-        color: #666;
-        margin-bottom: 20px;
-    }
-
-    info.box .box-icon{
-        font-size: 2rem;
-        margin-bottom: 20px;
-        color:#555
-
-    }
-
-    /*Rodape da pagina*/
-
-    footer {
-        text-align: center;
-        padding: 40px 0;
-        margin-top: 40px;
-        border-top: 1x solid #eee;
-    color: #666;
-    }
-
-    /* responsividade da página*/
-
-    @media( max-width: 786px){
-        header{
-            padding: 40px 0 30px;
-
+        /* Seção dos Boxes */
+        .portfolio-section {
+            padding: 20px 0 60px;
         }
-        header h1{
-            font-size: 2rem;
 
+        .boxes-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
         }
-        .boxes-container{
-            grid-template-columns: 1fr;
+
+        .info-box {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            border-top: 4px solid #6e48aa;
         }
-    }
-    
+
+        .info-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+        }
+
+        .info-box h3 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: #333;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .info-box p {
+            color: #555;
+            margin-bottom: 20px;
+            line-height: 1.7;
+        }
+
+        .info-box a {
+            color: #6e48aa;
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            transition: color 0.3s;
+        }
+
+        .info-box a:hover {
+            color: #9d50bb;
+        }
+
+        .box-icon {
+            font-size: 1.8rem;
+            color: #6e48aa;
+            margin-bottom: 15px;
+        }
+
+        /* Rodapé */
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            background: linear-gradient(135deg, #6e48aa 0%, #9d50bb 100%);
+            color: white;
+            margin-top: 60px;
+        }
+
+        footer p {
+            opacity: 0.9;
+        }
+
+        /* Lista de habilidades */
+        .skills-list {
+            list-style-type: none;
+        }
+
+        .skills-list li {
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 25px;
+        }
+
+        .skills-list li:before {
+            content: "→";
+            color: #6e48aa;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        /* Contatos */
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .contact-info a {
+            color: #6e48aa;
+            text-decoration: none;
+            transition: color 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .contact-info a:hover {
+            color: #9d50bb;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            header {
+                padding: 60px 0 30px;
+            }
+            
+            header h1 {
+                font-size: 2.2rem;
+            }
+            
+            header p {
+                font-size: 1rem;
+                padding: 0 20px;
+            }
+            
+            .info-box {
+                padding: 25px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .info-box h3 {
+                font-size: 1.3rem;
+            }
+        }
     </style>
-
 </head>
 <body>
-
-    <div> class="container"
+    <div class="container">
         <header>
-            <h1> Leonardo Ribeiro Sales </h1>
-            <p>Técnico em eletrônica & Desenvolvedor junir(Em andamento)</p>
+            <h1>Leonardo Ribeiro Sales</h1>
+            <p>Técnico em Eletrônica & Desenvolvedor Junior (Em andamento)</p>
         </header>
 
-        <section class="portifolio-section"
-        <div class="boxes-container"
+        <section class="portfolio-section">
+            <div class="boxes-container">
 
-        <!--Box 1 - Sobre min -->
-    <div class="info-box"
-    <div class="box-icon">👤</div>
-    <h3>Sobre min</h3>
-    <p>Me chamo Leonardo tenho 24 anos, natural de Caxias do sul Rs sou um rapaz que é movido por novos conhecimentos.
-        Atualmente estou cursando o curso Dev full Satack pela +prati, e sou formado técnico em eletrônica pelo Senai Nilo Peçanha, trabalho na área de pós vendas da empresa 
-        Inova Sistemas eletrônicos,onde atuo com manutenções e atendimento ao cliente, além de ser apaixonado por tecnologia e proframação.</p>
+                <!-- Box 1 - Sobre mim -->
+                <div class="info-box">
+                    <div class="box-icon"><i class="fas fa-user"></i></div>
+                    <h3>Sobre mim</h3>
+                    <p>Me chamo Leonardo, tenho 24 anos, natural de Caxias do Sul - RS. Sou um rapaz movido por novos conhecimentos. Atualmente estou cursando o curso Dev Full Stack pela +prati e sou formado técnico em eletrônica pelo Senai Nilo Peçanha. Trabalho na área de pós-vendas da empresa Inova Sistemas Eletrônicos, onde atuo com manutenções e atendimento ao cliente. Sou apaixonado por tecnologia e programação.</p>
+                    <a href="#">Saiba mais <i class="fas fa-arrow-right"></i></a>
+                </div>
 
-        <a href="#" style="color: #555; text-decoration: none;">- Saiba mais</a></div>
+                <!-- Box 2 - Habilidades -->
+                <div class="info-box">
+                    <div class="box-icon"><i class="fas fa-tools"></i></div>
+                    <h3>Habilidades</h3>
+                    <ul class="skills-list">
+                        <li>Proatividade e iniciativa</li>
+                        <li>Curiosidade e vontade de aprender</li>
+                        <li>Busca constante por novos conhecimentos</li>
+                        <li>Capacidade de trabalhar em equipe</li>
+                        <li>Habilidades técnicas em eletrônica</li>
+                        <li>Conhecimentos em desenvolvimento Python</li>
+                    </ul>
+                    <a href="#">Ver habilidades <i class="fas fa-arrow-right"></i></a>
+                </div>
 
-        <!--Box de habilidades-->
+                <!-- Box 3 - Projetos -->
+                <div class="info-box">
+                    <div class="box-icon"><i class="fas fa-laptop-code"></i></div>
+                    <h3>Projetos</h3>
+                    <p>Atualmente como iniciante na área de programação, desenvolvi um organizador de arquivos em Python. O projeto consiste em organizar de maneira eficiente arquivos que estão soltos em diversos diretórios do computador. O usuário tem um menu interativo onde indica o caminho da pasta que contém os arquivos, e o programa os move para as pastas corretas de acordo com sua extensão.</p>
+                    <a href="#">Ver portfólio <i class="fas fa-arrow-right"></i></a>
+                </div>
 
-        <div class="info-box">
+                <!-- Box 4 - Contatos -->
+                <div class="info-box">
+                    <div class="box-icon"><i class="fas fa-envelope"></i></div>
+                    <h3>Contatos</h3>
+                    <div class="contact-info">
+                        <a href="mailto:leonardsale126@gmail.com"><i class="fas fa-envelope"></i> leonardsale126@gmail.com</a>
+                        <a href="tel:+5554999985064"><i class="fas fa-phone"></i> (54) 99998-5064</a>
+                        <a href="https://www.linkedin.com/in/leonard-sales-53447218b/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                        <a href="https://github.com/LRLS-Srl" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                    </div>
+                    <a href="#">Entrar em contato <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </section>
 
-        </div class="box-icon">🛠️<div>
-            <h3>Habilidades que se destacam em mim!</h3>
-            <p>* Ser um rapaz proativo
-                * Ser um rapaz curioso
-                * Estar sempre em busca de novos conhecimentos
-                * Ser capaz de consiliar e dividar por igual todas tarefas em grupo</p>
-                <a href="#" style="color: #555; text-decoration: none;">- Ver Habilidades</a>
-
-        </div>
-
-        <!-- BOX DE PROJETOS-->
-
-
-        <div class="info-box">
-            <div class="box-icon">💻</div>"
-            <h3>Projetos</h3>
-            <p> Atualmente como iniciante na área de programação fiz o desenvolvimento simles de um separador de arquivos em python,
-                o projeto consiste em organizar de maneira mais eficiente arquivos que estão soltos em caminhos diversos do pc ou desktop,
-                o usuario tem um menu interativo onde é indicado o caminho e pasta que contém os arquivos, dito isto ele seleciona os arquivos que seram enviados para as pastas corretas.
-            </p>
-            <a href="#" style="color: #555; text-decoration: none;">- Ver Portifólio</a>
-        </div>"
-
-        <div class=" info-box">
-            <div class="box-icon">📞</div>"
-            <h3> Contatos</h3>
-            <p> Email: leonardsale126@gmail.com
-                <br> Telefone: (54) 99998-5064
-                <br>Linkedin: https://www.linkedin.com/in/leonard-sales-53447218b/
-                <br>Github: https://github.com/LRLS-Srl
-            </p><a href="#" style="color: #555; text-decoration: none;">- Ver Contatos</a>
-
-        </div>
+        <footer>
+            <p>&copy; 2023 Leonardo Ribeiro Sales. Todos os direitos reservados.</p>
+        </footer>
     </div>
-    <section>
-    </footer>
-    <p> @ Todos os direitos reservados, Meu perfil pessoal</p>
-    <div>
-        <body>
-        </html>l
+</body>
+</html>

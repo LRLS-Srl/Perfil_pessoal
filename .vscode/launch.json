@@ -9,6 +9,12 @@
             "request": "launch",
             "name": "Open perfil.html",
             "file": "/home/leonardo/perfil_pessoal/Perfil_pessoal/Perfil_pessoal/perfil.html"
+        },
+        {
+            "type": "chrome",
+            "name": "http://127.0.0.1:3000/perfil.html",
+            "request": "launch",
+            "url": "http://127.0.0.1:3000/perfil.html"
         }
     ]
 }
